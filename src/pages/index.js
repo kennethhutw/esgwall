@@ -85,7 +85,7 @@ export default function Home() {
       <section class="bg-white dark:bg-gray-900 flex flex-wrap max-w-5xl mx-auto gap-10">
           { projects && (
             projects.map((project=>(
-              <ProjectCard className="w-full" {...project}></ProjectCard>
+              <ProjectCard key={project.id} className="w-full" {...project}></ProjectCard>
             )))
           )}
       </section>
