@@ -43,8 +43,7 @@ export default function Members(props) {
   }
 
 
-export const getServerSideProps = withPageAuthRequired({
-  async getServerSideProps(ctx){
+export const getServerSideProps =     async function getServerSideProps(ctx){
     const props =await getAppProps(ctx);
     const client = await clientPromise;
     const db = client.db("ContentAI");
@@ -66,5 +65,4 @@ export const getServerSideProps = withPageAuthRequired({
             ...props
         }
     }
-  }
-});
+  };

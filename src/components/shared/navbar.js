@@ -32,6 +32,7 @@ const Navbar = () => {
                   height={50}
                   className="rounded-full"
                         ></Image>
+                        <Link className="text-sm" href="/api/auth/logout">Logout</Link>
               </div>
               
               </>

@@ -191,12 +191,10 @@ export default function Ranking(props) {
   }
 
 
-export const getServerSideProps = withPageAuthRequired({
-  async getServerSideProps(ctx){
+export const getServerSideProps =     async function getServerSideProps(ctx){
     const props =await getAppProps(ctx);
   
     return {
       props
     }
-  }
-});
+  };

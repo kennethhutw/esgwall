@@ -66,8 +66,7 @@ export default function Profile(props) {
         const member =  await db.collection("users").findOne({
             _id: new ObjectID(ctx.params.userId)
         });
-        console.log("ctx.params !!!!! ================", ctx.params)
-        console.log("userSession.user !!!!! ================", userSession.user)
+     
           const nfts =await db.collection('nfts').find({
               userId: new ObjectID(ctx.params.userId)
           })
