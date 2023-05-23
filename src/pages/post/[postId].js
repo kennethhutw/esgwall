@@ -7,7 +7,7 @@ import { PublicLayout } from "../../components/PublicLayout";
 import {getAppProps} from './../../utils/getAppProps';
 import { useContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import PostContext from '../../postContext';
+import PostContext from '../../context/postContext';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faBlog} from "@fortawesome/free-solid-svg-icons";
 import Router from 'next/router';
