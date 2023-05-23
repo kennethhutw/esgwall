@@ -6,26 +6,6 @@ import {useUser} from '@auth0/nextjs-auth0/client';
 import ActiveLink from './ActiveLink';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-const BsNavLink = props => {
-  const { href, title, className=''} = props;
-  return (
-    <ActiveLink activeclassName="active" href={href}>
-      <a className={`nav-link port-navbar-link ${className}`}>{title}</a>
-    </ActiveLink>
-  )
-}
-
-const BsNavBrand = () =>
-  <Link href="/">
-    <a className="navbar-brand port-navbar-brand">Filip Jerga</a>
-  </Link>
-
-const LoginLink = () =>
-  <a className="nav-link port-navbar-link" href="/api/v1/login">Login</a>
-
-const LogoutLink = () =>
-  <a className="nav-link port-navbar-link" href="/api/v1/logout">Logout</a>
-
 
 
 const Navbar = () => {
@@ -36,10 +16,10 @@ const Navbar = () => {
   return (
 <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="/" className="flex items-center">
+  <Link href="/" className="flex items-center">
       {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo"> */}
       <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ESGWall</span>
-  </a>
+  </Link>
   <div className="flex md:order-2">
 
   {!!user?
@@ -67,16 +47,16 @@ const Navbar = () => {
   <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
       <li>
-        <a href="/" className={router.pathname == "/" ? "active-link" : "link"} aria-current="page">Home</a>
+        <Link href="/" className={router.pathname == "/" ? "active-link" : "link"} aria-current="page">Home</Link>
       </li>
       <li>
-        <a href="/project" className={router.pathname == "/project" ? "active-link" : "link"}>Projects</a>
+        <Link href="/project" className={router.pathname == "/project" ? "active-link" : "link"}>Projects</Link>
       </li>
       <li>
-        <a href="/member" className={router.pathname == "/member" ? "active-link" : "link"}>ESGers</a>
+        <Link href="/member" className={router.pathname == "/member" ? "active-link" : "link"}>ESGers</Link>
       </li>
       <li>
-        <a href="/ranking" className={router.pathname == "/ranking" ? "active-link" : "link"}>Ranking</a>
+        <Link href="/ranking" className={router.pathname == "/ranking" ? "active-link" : "link"}>Ranking</Link>
       </li>
       <li>
       <Link className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="/project/new">Create Project</Link>
