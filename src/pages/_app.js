@@ -1,10 +1,10 @@
-import '@/styles/globals.css'
+import '../styles/globals.css';
 import { UserProvider } from '@auth0/nextjs-auth0/client';
 
 import {DM_Sans, DM_Serif_Display} from '@next/font/google';
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from '@fortawesome/fontawesome-svg-core';
-import { PostProvider } from '@/context/postContext';
+import { PostProvider } from '../context/postContext';
 config.autoAddCss= false;
 
 const  dmSans = DM_Sans({

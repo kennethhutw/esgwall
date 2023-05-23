@@ -1,13 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
-import HeroImg from "../../public/img/hero.jpg";
-import { Logo } from "@/components/Logo";
+
 import {useUser} from '@auth0/nextjs-auth0/client';
 import {  useEffect } from 'react';
 import { useRouter } from "next/router";
 
 import {AppHeader}  from "./../components/AppHeader";
-import { Navbar, ProjectCard } from "@/components";
+import { Navbar, ProjectCard } from "../components";
 export default function Home() {
 
   const {user} = useUser();

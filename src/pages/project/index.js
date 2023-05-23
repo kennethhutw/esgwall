@@ -1,10 +1,10 @@
 
-import { AppLayout } from "@/components/AppLayout";
+import { AppLayout } from "../../components/AppLayout";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import {getAppProps} from './../../utils/getAppProps';
-import { ProjectCard } from "@/components";
+import { ProjectCard } from "../../components";
 import Image from 'next/image';
 export default function NewPost(props) {
   const router = useRouter();

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';
 import { Logo } from '../Logo';
 import { useContext, useEffect } from 'react';
-import PostContext from '@/context/postContext';
+import PostContext from '../context/postContext';
 import {AppHeader} from "./../AppHeader";
 export const PublicLayout = ({children, postId, postCreated})=> {
   

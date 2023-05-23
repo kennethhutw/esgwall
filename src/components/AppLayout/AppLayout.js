@@ -7,7 +7,7 @@ import { Logo } from '../Logo';
 import { useContext, useEffect } from 'react';
 
 import {AppHeader}  from "./../AppHeader";
-import { Navbar } from "@/components";
+import { Navbar } from "../../components";
 export const AppLayout = ({children, availableTokens, posts: postsFromSSR, postId, postCreated})=> {
   const {user} = useUser();
 

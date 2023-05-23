@@ -1,5 +1,5 @@
 
-import { AppLayout } from "@/components/AppLayout";
+import { AppLayout } from "../../components/AppLayout";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
 import { useState } from "react";
