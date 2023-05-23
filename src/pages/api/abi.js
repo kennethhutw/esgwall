@@ -1,12 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+
 import fsPromises from 'fs/promises';
 import path from 'path'
 
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<any>
+  req, res
 ) {
     const filePath = path.join(process.cwd(), '/contracts/usdcABI.json');
     const jsonData = await fsPromises.readFile( filePath, "utf8");
