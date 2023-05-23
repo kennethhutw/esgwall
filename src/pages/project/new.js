@@ -17,7 +17,7 @@ export default function NewPost(props) {
 
   const handleSDGs = (e)=>{
     
-     console.log("target ===========", e.target);
+
      if(e.target.checked){
       // insert
       let _sdgs = sdgs;

@@ -28,11 +28,15 @@ if(!userSession){
 
          await db.collection("users").insertOne({
             auth0Id:userSession.user.sub,
-            availableTokens:5
+            availableTokens:5,
+            name: userSession.user.name,
+            email: userSession.user.email
         })
         return {
             availableTokens:5,
-            posts:[]
+            posts:[],
+            name: userSession.user.name,
+            email: userSession.user.email
         }
     }
 

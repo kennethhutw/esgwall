@@ -36,6 +36,7 @@
     "wagmi": "^1.0.5"
   },
   "devDependencies": {
+    "@types/react": "18.2.6",
     "autoprefixer": "^10.4.13",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
