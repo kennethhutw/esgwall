@@ -7,7 +7,7 @@ import path from 'path'
 export default async function handler(
   req, res
 ) {
-    const filePath = path.join(process.cwd(), '/contracts/usdcABI.json');
+    const filePath = path.join(process.cwd(), '/src/contracts/usdcABI.json');
     const jsonData = await fsPromises.readFile( filePath, "utf8");
     const objectData = JSON.parse(jsonData);
   res.status(200).json(objectData)

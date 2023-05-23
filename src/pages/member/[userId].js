@@ -14,7 +14,6 @@ import Router from 'next/router';
 export default function Profile(props) {
 
 
-  console.log("project ================", props)
   const router = useRouter();
 
   const [sdgs, setSDGs] = useState([]);
