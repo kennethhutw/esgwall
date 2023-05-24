@@ -20,13 +20,16 @@ export default function Team(props) {
    <div className="text-center items-center justify-center mt-12">
     <div className="flex   justify-center w-full">
    <img alt="..." src="/img/kenneth.jpg" width={150}
-                  height={150} class="shadow-xl rounded-full h-auto align-middle border-none "></img>
+                  height={150} className="shadow-xl rounded-full h-auto align-middle border-none "></img>
 
                   </div>
             <h3 className="text-4xl font-semibold leading-normal mb-2 text-blueGray-700">
               Kenneth Hu
             </h3>
-            <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
+            <h5 className="text-2xl font-semibold leading-normal mb-2 text-blueGray-700">
+              Full Stack Developer
+            </h5>
+            <div className="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
 
               <FontAwesomeIcon icon={faMapMarker} className=" mr-2 text-lg text-blueGray-400"></FontAwesomeIcon>
               Singapore

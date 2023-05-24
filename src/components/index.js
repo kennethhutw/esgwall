@@ -1,5 +1,6 @@
 export { default as Navbar } from "./shared/navbar";
 export { default as ProjectCard } from "./shared/ProjectCard";
+export { default as NftCard } from "./shared/NftCard";
 export { default as Button } from "./Button";
 export { default as Layout } from "./Layout";
 export { default as Loader } from "./Loader";
