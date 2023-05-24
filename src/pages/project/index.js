@@ -52,7 +52,10 @@ export default function NewPost(props) {
     return (
       <div className="h-full w-full mt-40">
 
-<section className="bg-white dark:bg-gray-900 flex flex-wrap max-w-5xl mx-auto gap-10">
+<div className="m-auto w-full max-w-screen-sm bg-slate-100 p-4 rounded-md shadow-xl border-slate shadow-slate-200 text-center">
+<span>Projects</span>
+</div>
+<section className="bg-white dark:bg-gray-900 flex flex-wrap max-w-5xl mx-auto gap-10 mt-10">
           { projects && (
             projects.map((project=>(
               <ProjectCard key={project.id} className="w-full" {...project}></ProjectCard>

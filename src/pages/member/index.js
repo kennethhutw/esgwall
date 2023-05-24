@@ -14,7 +14,10 @@ export default function Members(props) {
     return (
       <div className="h-full w-full mt-40">
 
-<section className="bg-white dark:bg-gray-900 flex flex-wrap max-w-5xl mx-auto gap-10">
+<div className="m-auto w-full max-w-screen-sm bg-slate-100 p-4 rounded-md shadow-xl border-slate shadow-slate-200 text-center">
+<span>ESG Contributors</span>
+</div>
+<section className="bg-white dark:bg-gray-900 flex flex-wrap max-w-5xl mx-auto gap-10 mt-10">
           { props.users && (
             props.users.map((user=>(
                 <div key={user.id} className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
