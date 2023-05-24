@@ -41,11 +41,11 @@ export default function Profile(props) {
             props.nfts.map((nft=>(
 
               <div key={nft.id} className="max-w-sm  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <Link href={`/project/${nft.project.id}`}>
+                  <Link href={`/project/${nft.project._id}`}>
                       <img className="rounded-t-lg" src={nft.project.image} alt="" />
                   </Link>
                   <div className="p-5">
-                      <Link href={`/project/${nft.project.id}`}>
+                      <Link href={`/project/${nft.project._id}`}>
                           <span className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{nft.project.topic.substring(0,30)+ "...."}</span>
                       </Link>
                       <div className="flex  justify-between"> <span className="mb-3 font-normal text-gray-700 dark:text-gray-400">Contract Address :  </span><Link href={`https://goerli.etherscan.io/address/${nft.address}`}>{nft.address.substring(0,10)+ "...."}</Link></div>
