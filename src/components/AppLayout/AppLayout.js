@@ -1,10 +1,5 @@
 import {useUser} from '@auth0/nextjs-auth0/client';
-import Link from "next/link";
-import Image from "next/image";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoins } from '@fortawesome/free-solid-svg-icons';
-import { Logo } from '../Logo';
-import { useContext, useEffect } from 'react';
+
 
 import {AppHeader}  from "./../AppHeader";
 import { Navbar } from "../../components";
