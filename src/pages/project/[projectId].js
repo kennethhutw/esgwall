@@ -255,14 +255,14 @@ export default function Project(props) {
 
 
   return (
-    <div className="h-full  mt-20 overflow-hidden">
+    <div className="h-full  mt-20 ">
       {!!generating && (
         <div className="text-slate-800 h-full w-full flex flex-col animate-pulse justify-center items-center">
           <FontAwesomeIcon icon={faBlog} className="text-8xl"></FontAwesomeIcon>
           <h6>loading....</h6>
         </div>
       )}
-      <div className="grid grid-cols-[1fr_500px]  overflow-auto">
+      <div className="grid grid-cols-[1fr_500px] h-screen justify-center items-center">
         {!generating && (
           <div className="max-w-3xl mx-auto bg-white p-8">
             <section className="bg-gray-300 rounded-lg px-6 py-8 mb-8">
