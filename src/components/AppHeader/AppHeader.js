@@ -1,20 +1,21 @@
-import {useUser} from '@auth0/nextjs-auth0/client';
+import { useUser } from '@auth0/nextjs-auth0/client';
 import Link from "next/link";
 
 import Head from "next/head";
-export const AppHeader = ({})=> {
+export const AppHeader = ({ }) => {
 
-    return (
-      <>
+  return (
+    <>
       <Head>
-        <title>SmartContentWriter</title>
-        <meta name="description" content="Create valuable content effortlessly with Content Writer's natural language magic." />
+        <title>ESGWall</title>
+        <meta name="description" content="Discover, Engage, Build: ESGWall
+Connecting ESG Project Owners and Users, Creating a Sustainable Community" />
         <meta charSet="UTF-8" />
         <meta name="keywords" content="ai, chatgpt, content, writer, blog" />
         <meta name="author" content="Kenneth Hu" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-  
-      </ >
-    )
-  }
+
+    </ >
+  )
+}
