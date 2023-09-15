@@ -262,7 +262,7 @@ export default function Project(props) {
           <h6>loading....</h6>
         </div>
       )}
-      <div className="grid grid-cols-[1fr_500px] h-screen justify-center items-center">
+      <div className="grid grid-cols-[1fr_500px] h-screen justify-center items-centerx">
         {!generating && (
           <div className="max-w-3xl mx-auto bg-white p-8">
             <section className="bg-gray-300 rounded-lg px-6 py-8 mb-8">
