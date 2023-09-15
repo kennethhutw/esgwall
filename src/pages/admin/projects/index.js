@@ -216,11 +216,11 @@ export default function AdminProjects(props) {
                     {project.amount>0 ? progress(project.amount, project.goal)+" %":"0"}
                     </td>
                     <td className="px-6 py-4">
-                    <Button
+                    <div
                       
                     >
                         Issue
-                    </Button>
+                    </div>
                     </td>
                 </tr>
                 ))
