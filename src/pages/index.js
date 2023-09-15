@@ -99,7 +99,7 @@ export default function Home() {
           paddingTop: "100px",
           paddingBottom: "100px"
         }}>
-          <span class="w-full text-2xl py-4">1.Create ESG project</span>
+          <span className="w-full text-2xl py-4">1.Create ESG project</span>
           <img
             src="img/ESGWall-Step-1.png"
             alt="steps"
@@ -109,7 +109,7 @@ export default function Home() {
 
         </section>
         <section className="bg-white dark:bg-gray-900 grid max-w-5xl mx-auto mb-20 text-center items-center p-4 rounded ">
-          <span class="w-full text-2xl py-4">2.Donate/Sponsor ESG Project</span>
+          <span className="w-full text-2xl py-4">2.Donate/Sponsor ESG Project</span>
           <img
             src="img/ESGWall-Step-2.png"
             alt="steps"
@@ -119,7 +119,7 @@ export default function Home() {
 
         </section>
         <section className="bg-white dark:bg-gray-900 grid max-w-5xl mx-auto mb-20 text-center items-center">
-          <span class="w-full text-2xl py-4">3.Deliver ESG cerification (NFT)</span>
+          <span className="w-full text-2xl py-4">3.Deliver ESG cerification (NFT)</span>
           <img
             src="img/ESGWall-Step-3.png"
             alt="steps"
@@ -129,7 +129,7 @@ export default function Home() {
 
         </section>
         <section className="bg-white dark:bg-gray-900 grid max-w-5xl mx-auto mb-50 pb-10 text-center items-center">
-          <span class="w-full text-2xl py-4">4, View my ESG cerification</span>
+          <span className="w-full text-2xl py-4">4, View my ESG cerification</span>
           <img
             src="img/ESGWall-Step-4.png"
             alt="steps"
@@ -138,59 +138,59 @@ export default function Home() {
           ></img>
 
         </section>
-        <footer class="bg-gray-100   mt-auto left-0">
-          <div class="container mx-auto px-6 pt-10 pb-6">
-            <div class="flex flex-wrap">
-              <div class="w-full md:w-1/4 text-center md:text-left">
-                <h5 class="uppercase mb-6 font-bold">Links</h5>
-                <ul class="mb-4">
-                  <li class="mt-2">
-                    <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">FAQ</a>
+        <footer className="bg-gray-100   mt-auto left-0">
+          <div className="container mx-auto px-6 pt-10 pb-6">
+            <div className="flex flex-wrap">
+              <div className="w-full md:w-1/4 text-center md:text-left">
+                <h5 className="uppercase mb-6 font-bold">Links</h5>
+                <ul className="mb-4">
+                  <li className="mt-2">
+                    <a href="#" className="hover:underline text-gray-600 hover:text-orange-500">FAQ</a>
                   </li>
-                  <li class="mt-2">
-                    <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Help</a>
+                  <li className="mt-2">
+                    <a href="#" className="hover:underline text-gray-600 hover:text-orange-500">Help</a>
                   </li>
-                  <li class="mt-2">
-                    <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Support</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="w-full md:w-1/4 text-center md:text-left">
-                <h5 class="uppercase mb-6 font-bold">Legal</h5>
-                <ul class="mb-4">
-                  <li class="mt-2">
-                    <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Terms</a>
-                  </li>
-                  <li class="mt-2">
-                    <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Privacy</a>
+                  <li className="mt-2">
+                    <a href="#" className="hover:underline text-gray-600 hover:text-orange-500">Support</a>
                   </li>
                 </ul>
               </div>
-              <div class="w-full md:w-1/4 text-center md:text-left">
-                <h5 class="uppercase mb-6 font-bold">Social</h5>
-                <ul class="mb-4">
-                  <li class="mt-2">
-                    <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Facebook</a>
+              <div className="w-full md:w-1/4 text-center md:text-left">
+                <h5 className="uppercase mb-6 font-bold">Legal</h5>
+                <ul className="mb-4">
+                  <li className="mt-2">
+                    <a href="#" className="hover:underline text-gray-600 hover:text-orange-500">Terms</a>
                   </li>
-                  <li class="mt-2">
-                    <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Linkedin</a>
-                  </li>
-                  <li class="mt-2">
-                    <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Twitter</a>
+                  <li className="mt-2">
+                    <a href="#" className="hover:underline text-gray-600 hover:text-orange-500">Privacy</a>
                   </li>
                 </ul>
               </div>
-              <div class="w-full md:w-1/4 text-center md:text-left">
-                <h5 class="uppercase mb-6 font-bold">Company</h5>
-                <ul class="mb-4">
-                  <li class="mt-2">
-                    <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Official Blog</a>
+              <div className="w-full md:w-1/4 text-center md:text-left">
+                <h5 className="uppercase mb-6 font-bold">Social</h5>
+                <ul className="mb-4">
+                  <li className="mt-2">
+                    <a href="#" className="hover:underline text-gray-600 hover:text-orange-500">Facebook</a>
                   </li>
-                  <li class="mt-2">
-                    <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">About Us</a>
+                  <li className="mt-2">
+                    <a href="#" className="hover:underline text-gray-600 hover:text-orange-500">Linkedin</a>
                   </li>
-                  <li class="mt-2">
-                    <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Contact</a>
+                  <li className="mt-2">
+                    <a href="#" className="hover:underline text-gray-600 hover:text-orange-500">Twitter</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="w-full md:w-1/4 text-center md:text-left">
+                <h5 className="uppercase mb-6 font-bold">Company</h5>
+                <ul className="mb-4">
+                  <li className="mt-2">
+                    <a href="#" className="hover:underline text-gray-600 hover:text-orange-500">Official Blog</a>
+                  </li>
+                  <li className="mt-2">
+                    <a href="#" className="hover:underline text-gray-600 hover:text-orange-500">About Us</a>
+                  </li>
+                  <li className="mt-2">
+                    <a href="#" className="hover:underline text-gray-600 hover:text-orange-500">Contact</a>
                   </li>
                 </ul>
               </div>

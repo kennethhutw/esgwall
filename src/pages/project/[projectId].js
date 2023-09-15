@@ -315,7 +315,7 @@ export default function Project(props) {
               <ul className="grid w-full gap-6 md:grid-cols-2">
                 <li>
                   <input type="radio" id="usdc-10" name="usdc-amount" value="1" onChange={(e) => {
-                    console.log("target =========", e.target); e.preventDefault();
+                     e.preventDefault();
                     setAmount(e.target.value);
                   }} className="hidden peer" ></input>
                   <label htmlFor="usdc-10" className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">

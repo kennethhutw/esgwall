@@ -14,19 +14,140 @@ import Router from 'next/router';
 import Link from "next/link";
 export default function Profile(props) {
 
-
+   console.log("props=============",props)
   const router = useRouter();
 
   const [sdgs, setSDGs] = useState([]);
   const [generating, setGenerating] = useState(false);
-  
+  const [currentTab, setCurrentTab] = useState("nfts");
   useEffect(()=>{
-
+    if(props){
+      calGoals(props.nfts)
+    }
 
   },[]);
 
+  const calGoals = (nfts)=>{
 
+    nfts.forEach((nft, i) => {
+  
+      nft.project.sdgs.split(',').forEach((goal, i) => {
+        console.log("goal==========", goal)
+        var name = goal;
+        if(goal<10){
+          name ="0"+ goal;
+        }
+       var index =goals.findIndex(x => x.id === name);
+       if(index >-1){
+        goals[index].amount +=1;
+        console.log("goals[index]==========",  goals[index])
+        console.log("amount==========",  goals.amount)
+       }
+      })
+    })
+  }
 
+  const goals =[{
+    id:"01",
+    name:"1. NO POVERTY",
+    projects:0,
+    amount:0
+  },{
+    id:"02",
+    name:"2. ZERO HUNGER",
+    projects:1,
+    amount:0
+  },{
+    id:"03",
+    name:"3. GOOD HEALTH AND WELL-BEING",
+    projects:1,
+    amount:0
+  },{
+    id:"04",
+    name:"4. QUALITY EDUCATION",
+    projects:1,
+    amount:0
+  },{
+    id:"05",
+    name:"5.  GENER EQUAITY",
+    projects:0,
+    amount:0
+  },{
+    id:"06",
+    name:"6. CLEAN WATER AND SANITATION",
+    projects:2,
+    amount:0
+  },{
+    id:"07",
+    name:"7. AFFORDABLE AND CLEAN ENERGY",
+    projects:2,
+    amount:0
+  },{
+    id:"08",
+    name:"8. DECENT WORK AND ECONOMIC GROWTH",
+    projects:1,
+    amount:0
+  },{
+    id:"09",
+    name:"9. INDUSTRY, INNOVATION AND INFRASTRUCTURE",
+    projects:5,
+    amount:1
+  },{
+    id:"10",
+    name:"10. REDUCED INEQUALITIES",
+    projects:0,
+    amount:2
+  },{
+    id:"11",
+    name:"11.  SUSTAINABLE CITIES AND COMMUNITIES",
+    projects:3,
+    amount:1
+  },{
+    id:"12",
+    name:"12. RESPONSEIBLE CONSUMPTION AND PRODUCTION",
+    projects:3,
+    amount:0
+  },{
+    id:"13",
+    name:"13. CLIMATE ACTION",
+    projects:6,
+    amount:0
+  },{
+    id:"14",
+    name:"14. LIFE BELOW WATER",
+    projects:0,
+    amount:2
+  },{
+    id:"15",
+    name:"15 LIFE ON LAND",
+    projects:1,
+    amount:0
+  },{
+    id:"16",
+    name:"16 PEACE, JUSTICE AND STRONG INTITUIONS",
+    projects:0,
+    amount:0
+  },{
+    id:"17",
+    name:"17 PARTNERSHIPS FOR THE GOALS",
+    projects:6,
+    amount:1
+  }]
+    
+  const goalImgs =(goals)=>{
+    if(!goals && goals=="")
+    return "";
+    let outputgoalHTML =[];
+        goals.split(",").forEach((goal, i) => {
+            var name = goal;
+            if(goal <10){
+                name ="0"+ goal;
+            }
+            outputgoalHTML.push(<Image className="rounded" width={50}  height={50} src={`/icons/E-WEB-Goal-${name}.png`} alt="" />);
+        });
+
+     return outputgoalHTML;
+  }
 
     return (
       <div className="overflow-auto h-full  mt-40 profile-page">
@@ -35,8 +156,22 @@ export default function Profile(props) {
 
             <div className="flex  justify-between"> <span className="mb-3 font-normal text-gray-700 dark:text-gray-400">Total NFTs :  </span><span >{props.nfts.length}</span></div>
             </div>
-
+            <div className="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+              <ul className="flex flex-wrap -mb-px">
+                  <li className="mr-2">
+                      <a href="#" onClick={(e)=>setCurrentTab("nfts")} className={"inline-block p-4 " + (currentTab=="nfts" ? 'text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500'
+                      : 'border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300') }>NFT</a>
+                  </li>
+                  <li className="mr-2">
+                      <a href="#"  onClick={(e)=>setCurrentTab("goals")} className={"" + (currentTab=="goals" ? 'inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500'
+                      : 'inline-block p-4  border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300') } aria-current="page">ESG Goals</a>
+                  </li>
+                
+              </ul>
+          </div>
            <div  className="mt-10 w-full flex gap-10 p-4">
+           {currentTab =="nfts" &&
+           <>
             { props.nfts && (
             props.nfts.map((nft=>(
 
@@ -57,31 +192,64 @@ export default function Profile(props) {
                       </Link>
                   </div>
                 </div>
-                      //          <>
-        //         <Image className="rounded"    width={175}
-        //               height={175} src={nft.project.image} alt="" />
-        //                  <div className="flow-root">
-        // <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
-        // <li className="py-3 sm:py-4">
-        //               <span>Project Name: </span>
-        //                  <span>{nft.project.topic.substring(0,10)+ "...."}</span>
-        //                  </li>
-        //                  <li className="py-3 sm:py-4">
-        //               <span>Address : </span>
-        //                  <span>{nft.address.substring(0,10)+ "...."}</span>
-        //                  </li>
-                      
-        //                  <li className="py-3 sm:py-4">
-        //               <span>TokenId : </span>
-        //                  <span>{nft.tokenId}</span>
-        //                  </li>
-        //               </ul>
-        //               </div>
-        //          </>
+   
             )))
           )}
+          { !props.nfts && (<>No NFTs</>)}
+          </>
+            }
+
+{currentTab =="goals" &&
+           <>
+            { props.nfts && (
+           <div className="relative overflow-x-auto">
+           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                   <tr>
+                       <th scope="col" className="px-6 py-3">
+                           ESG Goal
+                       </th>
+                       {/* <th scope="col" className="px-6 py-3">
+                           Projects
+                       </th> */}
+                       <th scope="col" className="px-6 py-3">
+                           Amount
+                       </th>
+                   </tr>
+               </thead>
+               <tbody>
+                   {goals &&(
+                       goals.map((goal, i)=>(
+                  
+                      <tr key={goal.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                           <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                               {goal.name}
+                           </th>
+                           {/* <td className="px-6 py-4">
+                           {goal.projects}
+                           </td> */}
+                           <td className="px-6 py-4">
+                           {goal.amount}
+                           </td>
+                       </tr>
+                       ))
+                   )}
+                   
+                 
+                 
+               </tbody>
+           </table>
+       </div>
+          )}
+          { !props.nfts && (<>No Projects</>)}
+          </>
+            }
          </div>
-         
+         <style>{`
+         .profile-page{
+          padding: 80px 200px;
+         }
+         `}</style>
       </div>
     )
   }

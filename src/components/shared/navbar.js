@@ -13,6 +13,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const [isNavOpen, setIsNavOpen] = useState(false); 
+  
+  const [navbarOpen, setNavbarOpen] = useState(false);
   const router = useRouter();
   return (
 <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
@@ -25,7 +27,7 @@ const Navbar = () => {
 
   {!!user?
               <>
-              <div className='min-w-[50px]'>
+              {/* <div className='min-w-[50px]'>
                   <Image
                   src={user.picture}
                   alt={user.name}
@@ -35,7 +37,29 @@ const Navbar = () => {
                         ></Image>
                         <Link className="text-sm" href="/api/auth/logout">Logout</Link>
               </div>
-              
+               */}
+               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <div className="relative ml-3">
+                  <div>
+                    <button type="button" onClick={() => setNavbarOpen((prev) => !prev)} className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                      <span className="sr-only">Open user menu</span>
+                      <Image
+                  src={user.picture}
+                  alt={user.name}
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                        ></Image>
+                    </button>
+                  </div>
+
+                  <div className={`absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${navbarOpen ? ' ' : 'hide-menu'}`} role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1">
+                    <Link className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0" href="/profile" onClick={() => setNavbarOpen((prev) => !prev)}>Your Profile</Link>
+                    <Link className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0" href="/admin/projects" onClick={() => setNavbarOpen((prev) => !prev)}>Admin</Link>
+                    <Link className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0" href="/api/auth/logout" onClick={() => setNavbarOpen((prev) => !prev)}>Logout</Link>
+                  </div>
+                </div>
+              </div>
               </>
               :
               <Link className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="/api/auth/login">Login</Link>
@@ -124,6 +148,11 @@ const Navbar = () => {
         justify-content: space-evenly;
         align-items: center;
       }
+      
+.hide-menu {
+  display: none;
+  transform: translateX(0px);
+}
     `}</style>
 </nav>
   );
