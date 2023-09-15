@@ -4,8 +4,9 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import {getAppProps} from './../../../utils/getAppProps';
-
+import { Button } from "../../../components";
 import Image from 'next/image';
+
 export default function AdminProjects(props) {
   const router = useRouter();
   const projects = [{
@@ -189,6 +190,9 @@ export default function AdminProjects(props) {
                 <th scope="col" className="px-6 py-3">
                     Progress
                 </th>
+                <th scope="col" className="px-6 py-3">
+                    Action
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -210,6 +214,13 @@ export default function AdminProjects(props) {
                     </td>
                     <td className="px-6 py-4">
                     {project.amount>0 ? progress(project.amount, project.goal)+" %":"0"}
+                    </td>
+                    <td className="px-6 py-4">
+                    <Button
+                      
+                    >
+                        Issue
+                    </Button>
                     </td>
                 </tr>
                 ))
