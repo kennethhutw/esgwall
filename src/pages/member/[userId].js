@@ -169,7 +169,7 @@ export default function Profile(props) {
                 
               </ul>
           </div>
-           <div  className="mt-10 w-full flex gap-10 p-4">
+           <div  className="mt-10 w-full flex gap-10 p-4   justify-center ">
            {currentTab =="nfts" &&
            <>
             { props.nfts && (
